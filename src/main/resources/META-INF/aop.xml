@@ -1,0 +1,14 @@
+<!DOCTYPE aspectj PUBLIC
+        "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+    <weaver>
+        <include within="cucumber.runtime.model..*"/>
+        <include within="com.epam..*"/>
+        <exclude within="com.epam.aspects..*"/>
+    </weaver>
+    <aspects>
+        <aspect name="com.epam.aspects.CucumberAspects" />
+        <aspect name="com.epam.aspects.PageObjectsAspects" />
+        <aspect name="com.epam.aspects.WebElementAspects" />
+    </aspects>
+</aspectj>
